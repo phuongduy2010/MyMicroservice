@@ -1,0 +1,17 @@
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\bin\Debug\net9.0\ShippingSvc.Application.deps.json
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\bin\Debug\net9.0\ShippingSvc.Application.dll
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\bin\Debug\net9.0\ShippingSvc.Application.pdb
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\bin\Debug\net9.0\Shared.dll
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\bin\Debug\net9.0\ShippingSvc.Domain.dll
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\bin\Debug\net9.0\ShippingSvc.Domain.pdb
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\bin\Debug\net9.0\Shared.pdb
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\ShippingSvc.Application.csproj.AssemblyReference.cache
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\ShippingSvc.Application.GeneratedMSBuildEditorConfig.editorconfig
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\ShippingSvc.Application.AssemblyInfoInputs.cache
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\ShippingSvc.Application.AssemblyInfo.cs
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\ShippingSvc.Application.csproj.CoreCompileInputs.cache
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\Shipping.8379F009.Up2Date
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\ShippingSvc.Application.dll
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\refint\ShippingSvc.Application.dll
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\ShippingSvc.Application.pdb
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Application\obj\Debug\net9.0\ref\ShippingSvc.Application.dll

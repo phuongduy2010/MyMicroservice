@@ -1,0 +1,17 @@
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\bin\Debug\net9.0\PaymentSvc.Infrastructure.deps.json
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\bin\Debug\net9.0\PaymentSvc.Infrastructure.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\bin\Debug\net9.0\PaymentSvc.Infrastructure.pdb
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\bin\Debug\net9.0\Shared.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\bin\Debug\net9.0\Shared.pdb
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.csproj.AssemblyReference.cache
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.AssemblyInfoInputs.cache
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.AssemblyInfo.cs
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.csproj.CoreCompileInputs.cache
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentS.43DB0C7C.Up2Date
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\refint\PaymentSvc.Infrastructure.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.pdb
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\ref\PaymentSvc.Infrastructure.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\bin\Debug\net9.0\PaymentSvc.Infrastructure.runtimeconfig.json
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.genruntimeconfig.cache

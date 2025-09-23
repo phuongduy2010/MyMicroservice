@@ -1,0 +1,295 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Infrastructure\\ShippingSvc.Infrastructure.csproj": {}
+  },
+  "projects": {
+    "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\phuon\\.nuget\\packages\\",
+        "outputPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\phuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.11.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Application\\ShippingSvc.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Application\\ShippingSvc.Application.csproj",
+        "projectName": "ShippingSvc.Application",
+        "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Application\\ShippingSvc.Application.csproj",
+        "packagesPath": "C:\\Users\\phuon\\.nuget\\packages\\",
+        "outputPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\phuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj"
+              },
+              "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Domain\\ShippingSvc.Domain.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Domain\\ShippingSvc.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Domain\\ShippingSvc.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Domain\\ShippingSvc.Domain.csproj",
+        "projectName": "ShippingSvc.Domain",
+        "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Domain\\ShippingSvc.Domain.csproj",
+        "packagesPath": "C:\\Users\\phuon\\.nuget\\packages\\",
+        "outputPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\phuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Infrastructure\\ShippingSvc.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Infrastructure\\ShippingSvc.Infrastructure.csproj",
+        "projectName": "ShippingSvc.Infrastructure",
+        "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Infrastructure\\ShippingSvc.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\phuon\\.nuget\\packages\\",
+        "outputPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\phuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj"
+              },
+              "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Application\\ShippingSvc.Application.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Application\\ShippingSvc.Application.csproj"
+              },
+              "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Domain\\ShippingSvc.Domain.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Domain\\ShippingSvc.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.11.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

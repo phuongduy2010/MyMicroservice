@@ -1,0 +1,371 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Api\\InventorySvc.Api.csproj": {}
+  },
+  "projects": {
+    "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Api\\InventorySvc.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Api\\InventorySvc.Api.csproj",
+        "projectName": "InventorySvc.Api",
+        "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Api\\InventorySvc.Api.csproj",
+        "packagesPath": "C:\\Users\\phuon\\.nuget\\packages\\",
+        "outputPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\phuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Infrastructure\\InventorySvc.Infrastructure.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Infrastructure\\InventorySvc.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "NSwag.AspNetCore": {
+              "target": "Package",
+              "version": "[14.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Application\\InventorySvc.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Application\\InventorySvc.Application.csproj",
+        "projectName": "InventorySvc.Application",
+        "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Application\\InventorySvc.Application.csproj",
+        "packagesPath": "C:\\Users\\phuon\\.nuget\\packages\\",
+        "outputPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\phuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Domain\\InventorySvc.Domain.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Domain\\InventorySvc.Domain.csproj"
+              },
+              "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Domain\\InventorySvc.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Domain\\InventorySvc.Domain.csproj",
+        "projectName": "InventorySvc.Domain",
+        "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Domain\\InventorySvc.Domain.csproj",
+        "packagesPath": "C:\\Users\\phuon\\.nuget\\packages\\",
+        "outputPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\phuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Infrastructure\\InventorySvc.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Infrastructure\\InventorySvc.Infrastructure.csproj",
+        "projectName": "InventorySvc.Infrastructure",
+        "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Infrastructure\\InventorySvc.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\phuon\\.nuget\\packages\\",
+        "outputPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\phuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Application\\InventorySvc.Application.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Application\\InventorySvc.Application.csproj"
+              },
+              "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Domain\\InventorySvc.Domain.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Domain\\InventorySvc.Domain.csproj"
+              },
+              "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.11.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Microsoft.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[9.0.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj",
+        "projectName": "Shared",
+        "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj",
+        "packagesPath": "C:\\Users\\phuon\\.nuget\\packages\\",
+        "outputPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\phuon\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Confluent.Kafka": {
+              "target": "Package",
+              "version": "[2.11.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

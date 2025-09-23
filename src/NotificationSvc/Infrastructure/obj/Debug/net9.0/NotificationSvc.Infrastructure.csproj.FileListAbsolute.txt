@@ -1,0 +1,15 @@
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\NotificationSvc.Infrastructure.csproj.AssemblyReference.cache
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\NotificationSvc.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\NotificationSvc.Infrastructure.AssemblyInfoInputs.cache
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\NotificationSvc.Infrastructure.AssemblyInfo.cs
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\NotificationSvc.Infrastructure.csproj.CoreCompileInputs.cache
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\bin\Debug\net9.0\NotificationSvc.Infrastructure.deps.json
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\bin\Debug\net9.0\NotificationSvc.Infrastructure.dll
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\bin\Debug\net9.0\NotificationSvc.Infrastructure.pdb
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\bin\Debug\net9.0\Shared.dll
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\bin\Debug\net9.0\Shared.pdb
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\Notifica.135CA70B.Up2Date
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\NotificationSvc.Infrastructure.dll
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\refint\NotificationSvc.Infrastructure.dll
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\NotificationSvc.Infrastructure.pdb
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\ref\NotificationSvc.Infrastructure.dll

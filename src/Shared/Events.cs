@@ -1,0 +1,10 @@
+namespace Shared.Events;
+public record OrderItem(string ProductId, int Qty);
+public record OrderCreated(string OrderId, string CustomerId, List<OrderItem> Items, string? TraceId = null, int Version = 1);
+public record InventoryReserved(string OrderId, List<OrderItem> Items, string? TraceId = null, int Version = 1);
+public record InventoryFailed(string OrderId, string Reason, string? TraceId = null, int Version = 1);
+public record PaymentAuthorized(string OrderId, string PaymentId, decimal Amount, string? TraceId = null, int Version = 1);
+public record PaymentFailed(string OrderId, string Reason, string? TraceId = null, int Version = 1);
+public record OrderConfirmed(string OrderId, string? TraceId = null, int Version = 1);
+public record OrderCancelled(string OrderId, string Reason, string? TraceId = null, int Version = 1);
+public record ShipmentCreated(string OrderId, string TrackingNumber, string? TraceId = null, int Version = 1);
