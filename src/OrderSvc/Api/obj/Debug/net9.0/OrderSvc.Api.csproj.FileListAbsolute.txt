@@ -91,3 +91,4 @@ D:\demo\clean-kafka-microservices-full\src\OrderSvc\Api\bin\Debug\net9.0\NSwag.G
 D:\demo\clean-kafka-microservices-full\src\OrderSvc\Api\bin\Debug\net9.0\NSwag.Generation.AspNetCore.dll
 D:\demo\clean-kafka-microservices-full\src\OrderSvc\Api\bin\Debug\net9.0\YamlDotNet.dll
 D:\demo\clean-kafka-microservices-full\src\OrderSvc\Api\obj\Debug\net9.0\OrderSvc.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\demo\clean-kafka-microservices-full\src\OrderSvc\Api\obj\Debug\net9.0\OrderSvc.Api.sourcelink.json
