@@ -15,3 +15,4 @@ D:\demo\clean-kafka-microservices-full\src\OrderSvc\Application\obj\Debug\net9.0
 D:\demo\clean-kafka-microservices-full\src\OrderSvc\Application\obj\Debug\net9.0\refint\OrderSvc.Application.dll
 D:\demo\clean-kafka-microservices-full\src\OrderSvc\Application\obj\Debug\net9.0\OrderSvc.Application.pdb
 D:\demo\clean-kafka-microservices-full\src\OrderSvc\Application\obj\Debug\net9.0\ref\OrderSvc.Application.dll
+D:\demo\clean-kafka-microservices-full\src\OrderSvc\Application\obj\Debug\net9.0\OrderSvc.Application.sourcelink.json

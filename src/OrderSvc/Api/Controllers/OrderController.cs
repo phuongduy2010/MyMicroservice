@@ -28,7 +28,7 @@ namespace OrderSvc.Api.Controllers
             return CreatedAtAction(nameof(GetOrderById), new { id = orderId }, order);
         }
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetOrderById(Guid id)
+        public async Task<ActionResult<Order>> GetOrderById(Guid id)
         {
             var order = await _getHandler.GetOrderByIdAsync(id.ToString(), CancellationToken.None);
             _logger.LogInformation("Get OrderId: {OrderId}", id);

@@ -10,6 +10,8 @@ using OrderSvc.Infrastructure.Outbox;
 using OrderSvc.Domain.Enums;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using OrderSvc.Infrastructure.Inbox;
+using OrderSvc.Application.Abstractions;
 namespace OrderSvc.Infrastructure.Messaging;
 
 public sealed class OrderConsumers : BackgroundService
@@ -17,7 +19,7 @@ public sealed class OrderConsumers : BackgroundService
     
     private readonly IServiceScopeFactory _scopeFactory;
     private readonly IConsumer<string, string> _con;
-    private readonly Dictionary<string, Func<string, string, Task>> _messageHandlers;
+    private readonly Dictionary<string, Func<string, string, CancellationToken, Task>> _messageHandlers;
 
     private readonly ILogger<OrderConsumers> _logger;
     public OrderConsumers(IServiceScopeFactory scopeFactory, ILogger<OrderConsumers> logger, IConfiguration cfg)
@@ -57,71 +59,80 @@ public sealed class OrderConsumers : BackgroundService
                 }
                 if (_messageHandlers.TryGetValue(cr.Topic, out var handler))
                 {
-                    await handler(cr.Message.Value, msgId);
+                    await handler(cr.Message.Value, msgId, ct);
                     _con.Commit(cr);
                 }
             }
         }, ct);
     }
-    private async Task HandleInventoryReserved(string messageValue, string msgId)
+    private async Task HandleInventoryReserved(string messageValue, string msgId, CancellationToken ct)
     {
         using var scope = _scopeFactory.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+        var inbox = scope.ServiceProvider.GetRequiredService<IInboxRepository>();
         var ev = JsonSerializer.Deserialize<InventoryReserved>(messageValue)!;
-        var order = await db.Orders.FindAsync([ev.OrderId]);
-        if (order != null) order.Status =  OrderStatus.AwaitingPayment.ToString();
-        db.Inbox.Add(new InboxMessage { MessageId = msgId });
-        await db.SaveChangesAsync();
-    }
-
-    private async Task HandleInventoryFailed(string messageValue, string msgId)
-    {
-        using var scope = _scopeFactory.CreateScope();
-        var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
-        var ev = JsonSerializer.Deserialize<InventoryFailed>(messageValue)!;
-        var order = await db.Orders.FindAsync([ev.OrderId]);
-        if (order != null) order.Status = OrderStatus.Cancelled.ToString();
-        db.Outbox.Add(new OutboxMessage
+        var order = await db.Orders.FindAsync([ev.OrderId], ct);
+        if (order != null)
         {
-            AggregateId = ev.OrderId,
-            Type = Topic.OrderCancelled,
-            Payload = JsonSerializer.Serialize(new OrderCancelled(ev.OrderId, ev.Reason))
-        });
-        db.Inbox.Add(new InboxMessage { MessageId = msgId });
-        await db.SaveChangesAsync();
+            order.Status = OrderStatus.AwaitingPayment.ToString();
+            _logger.LogInformation("Update status to {Status}", OrderStatus.AwaitingPayment);
+        }
+        await inbox.MarkProcessedAsync(msgId, ct);
+
+        await db.SaveChangesAsync(ct);
     }
 
-    private async Task HandlePaymentAuthorized(string messageValue, string msgId)
+    private async Task HandleInventoryFailed(string messageValue, string msgId, CancellationToken ct)
     {
         using var scope = _scopeFactory.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+        var outboxRepository = scope.ServiceProvider.GetRequiredService<IOutboxRepository>();
+        var inboxRepository = scope.ServiceProvider.GetRequiredService<IInboxRepository>();
+        var ev = JsonSerializer.Deserialize<InventoryFailed>(messageValue)!;
+        var order = await db.Orders.FindAsync([ev.OrderId], cancellationToken: ct);
+        if (order != null)
+        {
+            order.Status = OrderStatus.Cancelled.ToString();
+             _logger.LogInformation("Update status to {Status}", OrderStatus.Cancelled);
+        }
+        await outboxRepository.AddAsync(Topic.OrderCancelled, ev.OrderId,
+                                JsonSerializer.Serialize(new OrderCancelled(ev.OrderId, ev.Reason)), ct);
+
+        await inboxRepository.MarkProcessedAsync(msgId, ct);
+        await db.SaveChangesAsync(ct);
+    }
+
+    private async Task HandlePaymentAuthorized(string messageValue, string msgId,  CancellationToken ct)
+    {
+        using var scope = _scopeFactory.CreateScope();
+        var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+        var outboxRepository = scope.ServiceProvider.GetRequiredService<IOutboxRepository>();
+        var inboxRepository = scope.ServiceProvider.GetRequiredService<IInboxRepository>();
         var ev = JsonSerializer.Deserialize<PaymentAuthorized>(messageValue)!;
         var order = await db.Orders.FindAsync([ev.OrderId]);
-        if (order != null) order.Status =  OrderStatus.Confirmed.ToString();
-        db.Outbox.Add(new OutboxMessage
+        if (order != null)
         {
-            AggregateId = ev.OrderId,
-            Type = Topic.OrderConfirmed,
-            Payload = JsonSerializer.Serialize(new OrderConfirmed(ev.OrderId))
-        });
-        db.Inbox.Add(new InboxMessage { MessageId = msgId });
-        await db.SaveChangesAsync();
+            order.Status = OrderStatus.Confirmed.ToString();
+             _logger.LogInformation("Update status to {Status}", OrderStatus.Confirmed);
+        }
+        await outboxRepository.AddAsync(Topic.OrderConfirmed, ev.OrderId,
+                                 JsonSerializer.Serialize(new OrderConfirmed(ev.OrderId)), ct);
+        await inboxRepository.MarkProcessedAsync(msgId, ct);
+        await db.SaveChangesAsync(ct);
     }
 
-    private async Task HandlePaymentFailed(string messageValue, string msgId)
+    private async Task HandlePaymentFailed(string messageValue, string msgId,  CancellationToken ct)
     {
         using var scope = _scopeFactory.CreateScope();
         var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+        var outboxRepository = scope.ServiceProvider.GetRequiredService<IOutboxRepository>();
+        var inboxRepository = scope.ServiceProvider.GetRequiredService<IInboxRepository>();
         var ev = JsonSerializer.Deserialize<PaymentFailed>(messageValue)!;
-        var order = await db.Orders.FindAsync([ev.OrderId]);
+        var order = await db.Orders.FindAsync([ev.OrderId], ct);
         if (order != null) order.Status =  OrderStatus.Cancelled.ToString();
-        db.Outbox.Add(new OutboxMessage
-        {
-            AggregateId = ev.OrderId,
-            Type = Topic.OrderCancelled,
-            Payload = JsonSerializer.Serialize(new OrderCancelled(ev.OrderId, ev.Reason))
-        });
-        db.Inbox.Add(new InboxMessage { MessageId = msgId });
-        await db.SaveChangesAsync();
+        await outboxRepository.AddAsync(Topic.OrderCancelled, ev.OrderId,
+                                       JsonSerializer.Serialize(new OrderCancelled(ev.OrderId, ev.Reason)), ct);
+        await inboxRepository.MarkProcessedAsync(msgId, ct);
+        await db.SaveChangesAsync(ct);
     }
 }

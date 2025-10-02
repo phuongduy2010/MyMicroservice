@@ -1,7 +1,6 @@
 using OrderSvc.Api.Middlewares;
 using OrderSvc.Application;
 using OrderSvc.Infrastructure;
-
 var builder = WebApplication.CreateBuilder(args);
 var cs = builder.Configuration.GetConnectionString("db") ?? "Host=localhost;Port=5432;Database=order_db;Username=postgres;Password=postgres";
 var bootstrap = builder.Configuration["Kafka:BootstrapServers"] ?? "localhost:9092";

@@ -33,6 +33,7 @@ public class OrderConfirmedConsumer : BackgroundService
             // blocks until a message arrives or the token is canceled.
             var cr = _con.Consume(ct);
             var msgId = $"{cr.Topic}:{cr.Partition.Value}:{cr.Offset.Value}";
+            _logger.LogInformation("Shipping received {msgId}", msgId);
             if (await db.Inbox.FindAsync([msgId], ct) is not null)
             {
                 _con.Commit(cr); continue;

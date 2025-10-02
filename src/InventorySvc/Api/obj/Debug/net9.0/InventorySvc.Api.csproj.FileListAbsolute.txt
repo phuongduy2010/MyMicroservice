@@ -196,3 +196,4 @@ D:\demo\clean-kafka-microservices-full\src\InventorySvc\Api\bin\Debug\net9.0\NSw
 D:\demo\clean-kafka-microservices-full\src\InventorySvc\Api\bin\Debug\net9.0\NSwag.Generation.AspNetCore.dll
 D:\demo\clean-kafka-microservices-full\src\InventorySvc\Api\bin\Debug\net9.0\YamlDotNet.dll
 D:\demo\clean-kafka-microservices-full\src\InventorySvc\Api\obj\Debug\net9.0\InventorySvc.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\demo\clean-kafka-microservices-full\src\InventorySvc\Api\obj\Debug\net9.0\InventorySvc.Api.sourcelink.json

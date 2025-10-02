@@ -1,0 +1,33 @@
+receivers:
+  otlp:
+    protocols:
+      grpc:
+      http:
+
+processors:
+  memory_limiter:
+    check_interval: 2s
+    limit_percentage: 75
+    spike_limit_percentage: 25
+  batch:
+  resourcedetection:
+    detectors: [env]
+    timeout: 2s
+    override: false
+
+exporters:
+  otlphttp:
+    endpoint: "jaeger:4318" #"jaeger:14250"
+    tls:
+      insecure: true
+  logging:
+    loglevel: debug
+  prometheus:
+    endpoint: "0.0.0.0:9464"
+
+service:
+  pipelines:
+    traces:
+      receivers: [otlp]
+      processors: [memory_limiter, batch, resourcedetection]
+      exporters: [otlphttp, logging]

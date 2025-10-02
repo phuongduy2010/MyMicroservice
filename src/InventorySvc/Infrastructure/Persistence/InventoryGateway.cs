@@ -21,6 +21,15 @@ public sealed class EfInventoryGateway(InventoryDbContext db) : IInventoryGatewa
                  WHERE ""ProductId"" = {1}
                    AND (""TotalQuantity"" - ""ReservedQuantity"") >= {0};",
                    item.Qty, item.ProductId);
+
+            // var inventoryItem = await _db.Inventory
+            //                     .Where(i => i.ProductId == item.ProductId && (i.TotalQuantity - i.ReservedQuantity) >= item.Qty)
+            //                     .FirstOrDefaultAsync();
+            // if (inventoryItem != null)
+            // {
+            //     inventoryItem.ReservedQuantity += item.Qty;
+            //     await _db.SaveChangesAsync();
+            // }
             if (rows == 0)
             {
                 await tx.RollbackAsync(ct);

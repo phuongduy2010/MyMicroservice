@@ -196,3 +196,4 @@ D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Api\bin\Debug\net9.0\Ship
 D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Api\bin\Debug\net9.0\ShippingSvc.Application.pdb
 D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Api\bin\Debug\net9.0\ShippingSvc.Domain.pdb
 D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Api\obj\Debug\net9.0\ShippingSvc.Api.MvcApplicationPartsAssemblyInfo.cs
+D:\demo\clean-kafka-microservices-full\src\ShippingSvc\Api\obj\Debug\net9.0\ShippingSvc.Api.sourcelink.json

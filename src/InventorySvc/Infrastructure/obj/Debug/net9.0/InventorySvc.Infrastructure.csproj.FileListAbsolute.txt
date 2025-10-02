@@ -19,3 +19,4 @@ D:\demo\clean-kafka-microservices-full\src\InventorySvc\Infrastructure\obj\Debug
 D:\demo\clean-kafka-microservices-full\src\InventorySvc\Infrastructure\obj\Debug\net9.0\ref\InventorySvc.Infrastructure.dll
 D:\demo\clean-kafka-microservices-full\src\InventorySvc\Infrastructure\bin\Debug\net9.0\InventorySvc.Infrastructure.runtimeconfig.json
 D:\demo\clean-kafka-microservices-full\src\InventorySvc\Infrastructure\obj\Debug\net9.0\InventorySvc.Infrastructure.genruntimeconfig.cache
+D:\demo\clean-kafka-microservices-full\src\InventorySvc\Infrastructure\obj\Debug\net9.0\InventorySvc.Infrastructure.sourcelink.json

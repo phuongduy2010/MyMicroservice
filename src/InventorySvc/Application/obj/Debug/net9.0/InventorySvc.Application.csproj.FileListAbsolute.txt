@@ -15,3 +15,4 @@ D:\demo\clean-kafka-microservices-full\src\InventorySvc\Application\obj\Debug\ne
 D:\demo\clean-kafka-microservices-full\src\InventorySvc\Application\obj\Debug\net9.0\refint\InventorySvc.Application.dll
 D:\demo\clean-kafka-microservices-full\src\InventorySvc\Application\obj\Debug\net9.0\InventorySvc.Application.pdb
 D:\demo\clean-kafka-microservices-full\src\InventorySvc\Application\obj\Debug\net9.0\ref\InventorySvc.Application.dll
+D:\demo\clean-kafka-microservices-full\src\InventorySvc\Application\obj\Debug\net9.0\InventorySvc.Application.sourcelink.json

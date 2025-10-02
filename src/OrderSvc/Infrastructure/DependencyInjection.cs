@@ -6,6 +6,7 @@ using OrderSvc.Infrastructure.Messaging;
 using OrderSvc.Infrastructure.Outbox;
 using OrderSvc.Domain;
 using Shared;
+using OrderSvc.Infrastructure.Inbox;
 
 namespace OrderSvc.Infrastructure;
 
@@ -19,6 +20,7 @@ public static class DependencyInjection
         services.AddDbContext<OrderDbContext>(o => o.UseNpgsql(connectionString));
         services.AddScoped<IOrderRepository, EfOrderRepository>();
         services.AddScoped<IOutboxRepository, EfOutboxRepository>();
+        services.AddScoped<IInboxRepository, EfInboxRepository>();
         services.AddScoped<IUnitOfWork, EfUnitOfWork>();
         services.AddSingleton(Kafka.Producer(bootstrapServers));
         services.AddHostedService<OutboxDispatcher>();

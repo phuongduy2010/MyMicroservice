@@ -15,3 +15,4 @@ D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\n
 D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\ref\PaymentSvc.Infrastructure.dll
 D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\bin\Debug\net9.0\PaymentSvc.Infrastructure.runtimeconfig.json
 D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.genruntimeconfig.cache
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Infrastructure\obj\Debug\net9.0\PaymentSvc.Infrastructure.sourcelink.json

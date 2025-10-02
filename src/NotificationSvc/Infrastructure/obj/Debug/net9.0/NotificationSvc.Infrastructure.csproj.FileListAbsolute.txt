@@ -13,3 +13,4 @@ D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\De
 D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\refint\NotificationSvc.Infrastructure.dll
 D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\NotificationSvc.Infrastructure.pdb
 D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\ref\NotificationSvc.Infrastructure.dll
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Infrastructure\obj\Debug\net9.0\NotificationSvc.Infrastructure.sourcelink.json

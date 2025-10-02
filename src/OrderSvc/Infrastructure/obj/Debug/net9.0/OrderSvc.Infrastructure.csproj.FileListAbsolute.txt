@@ -19,3 +19,4 @@ D:\demo\clean-kafka-microservices-full\src\OrderSvc\Infrastructure\obj\Debug\net
 D:\demo\clean-kafka-microservices-full\src\OrderSvc\Infrastructure\obj\Debug\net9.0\ref\OrderSvc.Infrastructure.dll
 D:\demo\clean-kafka-microservices-full\src\OrderSvc\Infrastructure\bin\Debug\net9.0\OrderSvc.Infrastructure.runtimeconfig.json
 D:\demo\clean-kafka-microservices-full\src\OrderSvc\Infrastructure\obj\Debug\net9.0\OrderSvc.Infrastructure.genruntimeconfig.cache
+D:\demo\clean-kafka-microservices-full\src\OrderSvc\Infrastructure\obj\Debug\net9.0\OrderSvc.Infrastructure.sourcelink.json

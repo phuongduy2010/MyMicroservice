@@ -84,3 +84,4 @@ D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Api\bin\Debug\net9.0\
 D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Api\bin\Debug\net9.0\runtimes\win\lib\net9.0\System.Diagnostics.EventLog.dll
 D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Api\bin\Debug\net9.0\NotificationSvc.Infrastructure.dll
 D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Api\bin\Debug\net9.0\NotificationSvc.Infrastructure.pdb
+D:\demo\clean-kafka-microservices-full\src\NotificationSvc\Api\obj\Debug\net9.0\NotificationSvc.Api.sourcelink.json
