@@ -177,3 +177,11 @@ D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\tr\Mi
 D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
 D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\obj\Debug\net9.0\PaymentSvc.Api.sourcelink.json
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\OpenTelemetry.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\OpenTelemetry.Api.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\OpenTelemetry.Api.ProviderBuilderExtensions.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\OpenTelemetry.Exporter.Console.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\OpenTelemetry.Exporter.OpenTelemetryProtocol.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\OpenTelemetry.Extensions.Hosting.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\OpenTelemetry.Instrumentation.AspNetCore.dll
+D:\demo\clean-kafka-microservices-full\src\PaymentSvc\Api\bin\Debug\net9.0\OpenTelemetry.Instrumentation.Http.dll

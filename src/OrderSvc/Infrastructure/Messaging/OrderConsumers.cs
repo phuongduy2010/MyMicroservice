@@ -12,6 +12,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using OrderSvc.Infrastructure.Inbox;
 using OrderSvc.Application.Abstractions;
+using System.Data;
 namespace OrderSvc.Infrastructure.Messaging;
 
 public sealed class OrderConsumers : BackgroundService
@@ -48,11 +49,12 @@ public sealed class OrderConsumers : BackgroundService
                 _logger.LogInformation("Order service is Polling messages...");
                 using var scope = _scopeFactory.CreateScope();
                 var db = scope.ServiceProvider.GetRequiredService<OrderDbContext>();
+                var inbox = scope.ServiceProvider.GetRequiredService<IInboxRepository>();
                  // blocks until a message arrives or the token is canceled.
                 var cr = _con.Consume(ct);
                 var msgId = $"{cr.Topic}:{cr.Partition.Value}:{cr.Offset.Value}";
                _logger.LogInformation("Order received {msgId}", msgId);
-                if (await db.Inbox.FindAsync([msgId]) != null)
+                if (await inbox.ExistsAsync(msgId, ct))
                 {
                     _con.Commit(cr);
                     continue;
@@ -96,7 +98,7 @@ public sealed class OrderConsumers : BackgroundService
              _logger.LogInformation("Update status to {Status}", OrderStatus.Cancelled);
         }
         await outboxRepository.AddAsync(Topic.OrderCancelled, ev.OrderId,
-                                JsonSerializer.Serialize(new OrderCancelled(ev.OrderId, ev.Reason)), ct);
+                                new OrderCancelled(ev.OrderId, ev.Reason), ct);
 
         await inboxRepository.MarkProcessedAsync(msgId, ct);
         await db.SaveChangesAsync(ct);
@@ -109,14 +111,14 @@ public sealed class OrderConsumers : BackgroundService
         var outboxRepository = scope.ServiceProvider.GetRequiredService<IOutboxRepository>();
         var inboxRepository = scope.ServiceProvider.GetRequiredService<IInboxRepository>();
         var ev = JsonSerializer.Deserialize<PaymentAuthorized>(messageValue)!;
-        var order = await db.Orders.FindAsync([ev.OrderId]);
+        var order = await db.Orders.FindAsync([ev.OrderId], ct);
         if (order != null)
         {
             order.Status = OrderStatus.Confirmed.ToString();
              _logger.LogInformation("Update status to {Status}", OrderStatus.Confirmed);
         }
         await outboxRepository.AddAsync(Topic.OrderConfirmed, ev.OrderId,
-                                 JsonSerializer.Serialize(new OrderConfirmed(ev.OrderId)), ct);
+                                 new OrderConfirmed(ev.OrderId), ct);
         await inboxRepository.MarkProcessedAsync(msgId, ct);
         await db.SaveChangesAsync(ct);
     }
@@ -131,7 +133,7 @@ public sealed class OrderConsumers : BackgroundService
         var order = await db.Orders.FindAsync([ev.OrderId], ct);
         if (order != null) order.Status =  OrderStatus.Cancelled.ToString();
         await outboxRepository.AddAsync(Topic.OrderCancelled, ev.OrderId,
-                                       JsonSerializer.Serialize(new OrderCancelled(ev.OrderId, ev.Reason)), ct);
+                                       new OrderCancelled(ev.OrderId, ev.Reason), ct);
         await inboxRepository.MarkProcessedAsync(msgId, ct);
         await db.SaveChangesAsync(ct);
     }

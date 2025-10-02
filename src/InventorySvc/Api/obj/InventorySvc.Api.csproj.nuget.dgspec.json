@@ -28,6 +28,9 @@
             "projectReferences": {
               "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Infrastructure\\InventorySvc.Infrastructure.csproj": {
                 "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\InventorySvc\\Infrastructure\\InventorySvc.Infrastructure.csproj"
+              },
+              "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj"
               }
             }
           }
@@ -345,6 +348,26 @@
             "Confluent.Kafka": {
               "target": "Package",
               "version": "[2.11.1, )"
+            },
+            "OpenTelemetry.Exporter.Console": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.12.0, )"
             }
           },
           "imports": [

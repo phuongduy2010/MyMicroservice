@@ -47,6 +47,26 @@
             "Confluent.Kafka": {
               "target": "Package",
               "version": "[2.11.1, )"
+            },
+            "OpenTelemetry.Exporter.Console": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.13.0, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.12.0, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.12.0, )"
             }
           },
           "imports": [
@@ -91,6 +111,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj": {
+                "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\Shared\\Shared.csproj"
+              },
               "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Application\\ShippingSvc.Application.csproj": {
                 "projectPath": "D:\\demo\\clean-kafka-microservices-full\\src\\ShippingSvc\\Application\\ShippingSvc.Application.csproj"
               },

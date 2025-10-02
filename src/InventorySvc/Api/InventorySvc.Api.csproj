@@ -5,9 +5,8 @@
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\Infrastructure\InventorySvc.Infrastructure.csproj" />
-    </ItemGroup>
-    <ItemGroup>
+      <ProjectReference Include="..\Infrastructure\InventorySvc.Infrastructure.csproj" />
+      <ProjectReference Include="..\..\Shared\Shared.csproj" />
       <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.9" />
       <PackageReference Include="NSwag.AspNetCore" Version="14.6.0" />
     </ItemGroup>

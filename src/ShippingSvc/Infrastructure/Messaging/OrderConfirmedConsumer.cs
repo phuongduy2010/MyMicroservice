@@ -38,30 +38,39 @@ public class OrderConfirmedConsumer : BackgroundService
             {
                 _con.Commit(cr); continue;
             }
-            var ev = JsonSerializer.Deserialize<OrderConfirmed>(cr.Message.Value)!;
-            var shippingLabel = new ShippingLabel
+            _logger.LogInformation("Shipping received {msgId}", cr.Message.Value);
+            try
             {
-                OrderId = ev.OrderId,
-                TrackingNumber = $"TRK-{Guid.NewGuid():N}"[0..12],
-                ShippingAddress = "Emerald City",
-                Status = "Pending",
-                CreatedAt = DateTime.UtcNow
-            };
-            var payload = new ShipmentCreated(ev.OrderId, shippingLabel.TrackingNumber, ev.TraceId, 1);
-            db.ShippingLabels.Add(shippingLabel);
-            db.Outbox.Add(new OutboxMessage
+                var ev = JsonSerializer.Deserialize<OrderConfirmed>(cr.Message.Value)!;
+                var shippingLabel = new ShippingLabel
+                {
+                    OrderId = ev.OrderId,
+                    TrackingNumber = $"TRK-{Guid.NewGuid():N}"[0..12],
+                    ShippingAddress = "Emerald City",
+                    Status = "Pending",
+                    CreatedAt = DateTime.UtcNow
+                };
+                var payload = new ShipmentCreated(ev.OrderId, shippingLabel.TrackingNumber, ev.TraceId, 1);
+                db.ShippingLabels.Add(shippingLabel);
+                db.Outbox.Add(new OutboxMessage
+                {
+                    Id = Guid.NewGuid(),
+                    Type = Topic.ShipmentCreated,
+                    AggregateId = ev.OrderId,
+                    Payload = JsonSerializer.Serialize(payload),
+                    CreatedAt = DateTime.UtcNow
+                });
+
+                _logger.LogInformation("Shipping created {trackingNumber} for Order {OrderId}", shippingLabel.TrackingNumber, ev.OrderId);
+                db.Inbox.Add(new InboxMessage { MessageId = msgId });
+                await db.SaveChangesAsync(ct);
+                _con.Commit(cr);
+            }
+            catch (Exception ex)
             {
-                Id = Guid.NewGuid(),
-                Type = Topic.ShipmentCreated,
-                AggregateId = ev.OrderId,
-                Payload = JsonSerializer.Serialize(payload),
-                CreatedAt = DateTime.UtcNow
-            });
-            
-            _logger.LogInformation("Shipping created {trackingNumber} for Order {OrderId}", shippingLabel.TrackingNumber, ev.OrderId);
-            db.Inbox.Add(new InboxMessage { MessageId = msgId });
-            await db.SaveChangesAsync(ct);
-            _con.Commit(cr);
+                _logger.LogError("Exception {ex}", ex.StackTrace);
+                _con.Commit(cr);
+            }
         }
     }, ct);
 }

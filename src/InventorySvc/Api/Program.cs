@@ -1,13 +1,14 @@
 
 using InventorySvc.Application;
 using InventorySvc.Infrastructure;
-
+using Shared.Observability;
 var builder = WebApplication.CreateBuilder(args);
 var cs = builder.Configuration.GetConnectionString("db") ?? "Host=localhost;Port=5432;Database=inventory_db;Username=postgres;Password=postgres";
 var bootstrap = builder.Configuration["Kafka:BootstrapServers"] ?? "localhost:9092";
 builder.Services.AddInfrastructure(cs, bootstrap);
 builder.Services.AddApplication();
 builder.Services.AddControllers();
+builder.AddCTBOpenTelemetry("InventorySvc", "http://localhost:4317");
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 

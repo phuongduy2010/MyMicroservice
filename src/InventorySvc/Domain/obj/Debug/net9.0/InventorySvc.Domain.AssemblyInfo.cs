@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("InventorySvc.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe3b5e68ce2553d85e122f2e6fc4a3845a79eff8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+768180429f11130664344236ae20caf9790c34b7")]
 [assembly: System.Reflection.AssemblyProductAttribute("InventorySvc.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("InventorySvc.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -16,8 +16,8 @@ processors:
     override: false
 
 exporters:
-  otlphttp:
-    endpoint: "jaeger:4318" #"jaeger:14250"
+  otlp:
+    endpoint: "jaeger:4317" #"jaeger:14250"
     tls:
       insecure: true
   logging:
@@ -30,4 +30,4 @@ service:
     traces:
       receivers: [otlp]
       processors: [memory_limiter, batch, resourcedetection]
-      exporters: [otlphttp, logging]
+      exporters: [otlp, logging]
